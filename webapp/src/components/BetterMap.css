@@ -1,0 +1,15 @@
+
+.tags {
+    margin-top: 1em;
+    display: block;
+}  
+
+.tag {
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+
+.popup-container {
+    text-align: right;
+}
