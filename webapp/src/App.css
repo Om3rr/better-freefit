@@ -75,3 +75,15 @@
   background: transparent;
   border: none;
 }
+
+
+@media only screen and (max-width: 813px) {
+  /* For mobile phones: */
+  .available-tags {
+    top: unset;
+    bottom: 1em;
+  }
+  .tags-container {
+    height: 150px;
+  }
+}

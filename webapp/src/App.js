@@ -5,9 +5,20 @@ import * as clubs from './data/clubs.json'
 import * as filteredTags from './data/filtered_tags.json'
 var _ = require('lodash');
 
+function isMobile() {
+  var match = window.matchMedia || window.msMatchMedia;
+  if(match) {
+      var mq = match("(pointer:coarse)");
+      return mq.matches;
+  }
+  return false;
+}
+
 const GetTagsFromClubs = (clubs) => {
   let allTags = _.flatten(Object.values(clubs).map(club => club.tags))
-  return _.without(_.uniq(allTags), filteredTags).sort()
+  let tagsCount = _.countBy(allTags, x => x)
+  let tagsSorted = _.sortBy(_.uniq(allTags), tag => -1 * tagsCount[tag])
+  return isMobile() ? tagsSorted.slice(0, 20) : tagsSorted
 }
 
 function App() {
