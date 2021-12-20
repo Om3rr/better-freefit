@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import BetterMap from './components/BetterMap';
 import * as clubs from './data/clubs.json'
-import * as filteredTags from './data/filtered_tags.json'
 var _ = require('lodash');
 
 function isMobile() {
