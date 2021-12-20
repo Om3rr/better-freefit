@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.ffb9ded4.css",
-    "main.js": "/static/js/main.cb225730.js",
-    "static/js/787.03b7f798.chunk.js": "/static/js/787.03b7f798.chunk.js",
-    "index.html": "/index.html",
-    "main.ffb9ded4.css.map": "/static/css/main.ffb9ded4.css.map",
-    "main.cb225730.js.map": "/static/js/main.cb225730.js.map",
-    "787.03b7f798.chunk.js.map": "/static/js/787.03b7f798.chunk.js.map"
+    "main.css": "/better-freefit/static/css/main.ffb9ded4.css",
+    "main.js": "/better-freefit/static/js/main.c2151dc4.js",
+    "static/js/787.03b7f798.chunk.js": "/better-freefit/static/js/787.03b7f798.chunk.js",
+    "index.html": "/better-freefit/index.html",
+    "main.ffb9ded4.css.map": "/better-freefit/static/css/main.ffb9ded4.css.map",
+    "main.c2151dc4.js.map": "/better-freefit/static/js/main.c2151dc4.js.map",
+    "787.03b7f798.chunk.js.map": "/better-freefit/static/js/787.03b7f798.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ffb9ded4.css",
-    "static/js/main.cb225730.js"
+    "static/js/main.c2151dc4.js"
   ]
 }
