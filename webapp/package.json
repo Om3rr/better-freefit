@@ -2,6 +2,8 @@
   "name": "better-freefit",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://om3rr.github.io/better-freefit",
+
   "dependencies": {
     "@react-google-maps/api": "^2.7.0",
     "@testing-library/jest-dom": "^5.16.1",
