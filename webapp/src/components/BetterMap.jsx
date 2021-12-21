@@ -2,6 +2,16 @@ import React from "react";
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
 import './BetterMap.css'
 
+function getClubHref(club) {
+    if(club.website.indexOf("freefit") > -1) {
+        return `https://freefit.co.il/CLUBS/?CLUB=${club.id}&SUBCLUBCATEGORY=-1`
+    }
+    return club.website.replace("http", "https")
+}
+
+function getFreefitUrl(id) {
+    return `https://freefit.co.il/CLUBS/?CLUB=${id}&SUBCLUBCATEGORY=-1`
+}
 
 function BetterMap({clubs, selectedTags}) {
     console.log(clubs)
@@ -15,7 +25,10 @@ function BetterMap({clubs, selectedTags}) {
                 <Marker key={club.id} position={club.lat_lng} title={club.title}>
                     <Popup>
                         <div className="popup-container">
-                            <h3>{club.title}</h3>
+                            <h3>
+                                <div><a href={getClubHref(club)} target="_blank">{club.title}</a> </div>
+                                <div><a href={getFreefitUrl(club.id)} target="_blank"> (freefit) </a></div>
+                            </h3>
                             {club.about}
                             <div className="tags">{club.tags.map((t, idx) => <span
                                 className={`tag ${selectedTags.indexOf(t) > -1 ? "selected" : ""}`}
