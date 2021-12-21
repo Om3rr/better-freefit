@@ -26,8 +26,8 @@ function BetterMap({clubs, selectedTags}) {
                     <Popup>
                         <div className="popup-container">
                             <h3>
-                                <div><a href={getClubHref(club)} target="_blank">{club.title}</a> </div>
-                                <div><a href={getFreefitUrl(club.id)} target="_blank"> (freefit) </a></div>
+                                <div><a href={getClubHref(club)} target="_blank" rel="noreferrer">{club.title}</a> </div>
+                                <div><a href={getFreefitUrl(club.id)} target="_blank" rel="noreferrer"> (freefit) </a></div>
                             </h3>
                             {club.about}
                             <div className="tags">{club.tags.map((t, idx) => <span
