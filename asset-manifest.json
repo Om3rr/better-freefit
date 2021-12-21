@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/better-freefit/static/css/main.1f3d961b.css",
-    "main.js": "/better-freefit/static/js/main.a640051c.js",
+    "main.js": "/better-freefit/static/js/main.38ae9324.js",
     "static/js/787.03b7f798.chunk.js": "/better-freefit/static/js/787.03b7f798.chunk.js",
     "index.html": "/better-freefit/index.html",
     "main.1f3d961b.css.map": "/better-freefit/static/css/main.1f3d961b.css.map",
-    "main.a640051c.js.map": "/better-freefit/static/js/main.a640051c.js.map",
+    "main.38ae9324.js.map": "/better-freefit/static/js/main.38ae9324.js.map",
     "787.03b7f798.chunk.js.map": "/better-freefit/static/js/787.03b7f798.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f3d961b.css",
-    "static/js/main.a640051c.js"
+    "static/js/main.38ae9324.js"
   ]
 }
