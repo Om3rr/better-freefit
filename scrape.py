@@ -7,9 +7,18 @@ from bs4 import BeautifulSoup
 from pydantic import BaseModel, Field
 from typing import List, Tuple, Optional
 from logging import getLogger
+import logging
+import sys
+
+root = getLogger(__name__)
+root.setLevel(logging.DEBUG)
+handler = logging.StreamHandler(sys.stdout)
+handler.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+root.addHandler(handler)
 
 logger = getLogger(__name__)
-
 def format_bsf_object(elem):
     s = []
     for c in elem.contents:
@@ -99,11 +108,12 @@ def scrape(clubs_file, area):
     except Exception:
         clubs = {}
     all_clubs = get_all_clubs(area)
+    logger.info(f"Found {len(all_clubs)} in {area}! going deeper")
     # In the beginning I thought to make it parallel with spaceships but its an overkill :/
     for club in all_clubs:
-        # if str(club.Id) in clubs:
-        #     logger.info(f"Skipping {club.Id}, already exists")
-        #     continue
+        if str(club.Id) in clubs:
+            logger.info(f"Skipping {club.Id}, already exists")
+            continue
         logger.info(f"Parsing club {club.Id}")
         try:
             parsed_club = parse_club(club.Id)
