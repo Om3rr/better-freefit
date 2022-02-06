@@ -122,6 +122,14 @@ def scrape(clubs_file, area):
             continue
         clubs[club.Id] = parsed_club.dict()
         write_clubs(clubs, clubs_file)
+    current_clubs = set([str(club.Id) for club in all_clubs])
+    existing_clubs = set(clubs.keys())
+    removed_clubs = existing_clubs - current_clubs
+    logger.info(f"Removing {len(removed_clubs)} clubs from overall {len(all_clubs)}")
+    for club_id in removed_clubs:
+        del clubs[club_id]
+    write_clubs(clubs, clubs_file)
+
 
 
 if __name__ == "__main__":
